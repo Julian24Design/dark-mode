@@ -1,20 +1,12 @@
 import { Container, Section } from '@radix-ui/themes'
-import dynamic from 'next/dynamic'
-import { ThemeToggleSkeleton } from './ThemeToggle'
-const ThemeToggle = dynamic(() => import('./ThemeToggle'), {
-  ssr: false,
-  loading: () => <ThemeToggleSkeleton />,
-})
+import ThemeSwitch from './ThemeSwitch'
 
 export default function Home() {
   return (
     <Container size='1'>
       <Section size='4'>
-        <div className='mb-20 flex items-center gap-4'>
-          <p>Toggle theme</p>
-          <ThemeToggle />
-        </div>
-        <div className='prose max-w-full'>
+        <ThemeSwitch />
+        <div className='prose dark:prose-invert max-w-full'>
           <h1>Lorem Ipsum</h1>
           <h3>What is Lorem Ipsum?</h3>
           <p>
