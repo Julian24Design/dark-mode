@@ -8,7 +8,7 @@ const ThemeToggle = dynamic(() => import('./ThemeToggle'), {
 
 export default function Home() {
   return (
-    <Container size='2'>
+    <Container size='1'>
       <Section size='4'>
         <div className='mb-20 flex items-center gap-4'>
           <p>Toggle theme</p>
